@@ -1,0 +1,106 @@
+﻿{
+  "name": "IISKursovayХранилище",
+  "modelName": "i-i-s-kursovay-хранилище",
+  "className": "Хранилище",
+  "nameSpace": "IIS.Kursovay",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "кодАдреса",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "склад",
+      "relatedTo": "i-i-s-kursovay-склад",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ХранилищеE",
+      "modelName": "i-i-s-kursovay-хранилище",
+      "attrs": [
+        {
+          "name": "кодАдреса",
+          "caption": "Код адреса",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Адрес",
+          "lookupValueField": "адрес",
+          "relationName": "Склад",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "адрес",
+              "caption": "Адрес",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Склад",
+          "name": "склад",
+          "relatedTo": "i-i-s-kursovay-склад",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ХранилищеL",
+      "modelName": "i-i-s-kursovay-хранилище",
+      "attrs": [
+        {
+          "name": "кодАдреса",
+          "caption": "Код адреса",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Склад",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "адрес",
+              "caption": "Адрес",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Адрес",
+          "name": "склад",
+          "relatedTo": "i-i-s-kursovay-склад",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

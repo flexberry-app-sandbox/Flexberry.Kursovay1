@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-kursovay-хранилище-e",
+  "editForm": "i-i-s-kursovay-хранилище-e",
+  "external": false,
+  "caption": "Хранилище",
+  "name": "IISKursovayХранилищеL",
+  "className": "ХранилищеL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-kursovay-хранилище",
+      "modelProjection": "ХранилищеL"
+    }
+  ]
+}
